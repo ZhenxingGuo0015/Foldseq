@@ -1,10 +1,10 @@
-Package: BedFC
+Package: Foldseq
 Type: Package
 Title: Log fold change detection based on an empirical bayesian method.
 Version: 0.1.0
 Author: Zhenxing Guo, Ying Cui
 Maintainer: Ying Cui <ycui38@emory.edu>
-Description: BedFc implements an empirical Bayesian method to substantially improve the power and accuracy in fold change detection.
+Description: Foldseq implements an empirical Bayesian method to substantially improve the power and accuracy in fold change detection.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
