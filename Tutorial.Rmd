@@ -1,0 +1,41 @@
+---
+title: "Foldseq: an empirical bayesian method to detect Log fold change"
+output: github_document
+---
+#Introduction
+
+This manual provides a walk through tutorial on how to use Foldseq, which implements an empirical Bayesian method to substantially improve the power and accuracy in fold change detection.
+
+##Installation
+To run the entire deconvolution tutorial, users need to install the Foldseq package.
+
+```{r,echo=TRUE,eval=FALSE}
+# install devtools if necessary
+install.packages('devtools')
+
+# install the Foldseq package
+devtools::install_github('cuiyingbeicheng/Foldseq')
+
+# load
+library(Foldseq)
+```
+
+##Example
+```{r,echo=FALSE,eval=TRUE}
+library(Foldseq)
+```
+```{r,warning=FALSE,results='hide'}
+# An example to detect log fold change
+data(smalldata)
+res = Foldseq(ctrl=smalldata$Ctrl, trt=smalldata$Trt, cis.chr="chr1", cis.null.lfc = 0, trans.null.lfc = log2(1.5))
+```
+```{r}
+# Users can output significant highly expressed cis genes 
+res$cis.high
+# (Things are the same for the rest types of genes,i.e.,significant highly expressed trans genes,
+# significant lowly expressed cis genes, significant lowly expressed trans genes,
+# cis genes not significantly expressed and trans genes not significantly expressed.)
+# Users can also output summary statistics of the fold change detection results
+res$sumStat
+```
+
