@@ -9,7 +9,7 @@ Foldseq implements an empirical Bayesian method to substantially improve the pow
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-BedFc(ctrl, trt, cis.chr, cis.null.lfc = 0, trans.null.lfc = 0)
+Foldseq(ctrl, trt, cis.chr, cis.null.lfc = 0, trans.null.lfc = 0)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
